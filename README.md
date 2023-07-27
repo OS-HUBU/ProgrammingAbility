@@ -40,12 +40,19 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
 
 ### 1 指标计算模型
 
- <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 50%;" />
+ <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 50%;"  width="500px"/>
 
 开发者编程能力评估指标的计算公式为：
-$$
-PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks}) \\ +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged})\\+ W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
-$$
+```math
+PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks})
+```
+```math
++W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged})
+```
+```math
++ W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
+```
+\
 其中，PA表示开发者编程能力值，W<sub>factor</sub>表示影响因素factor的权重系数；C<sub>factor</sub> 表示该开发者在影响因素factor上的数量，比如某个开发者创建项目的数量；S(C<sub>factor</sub>) 表示影响因素factor的得分，是以影响因素factor为自变量的函数值，函数S即为相应影响因素的实际映射方式，例如某个开发者创建了多少个项目，依据创建的项目数量给予得分。
 
 ### 2 影响因素权重的确定
@@ -54,34 +61,40 @@ CRITIC权重法是一种基于数据波动性的客观赋权法。其思想在�
 
 编程能力一共有八个影响因素，如下表所示，该表共有31万条开发者的数据，通过对已有的八个影响因素的数据进行分析，得出各个影响因素的权重。因此，可以来设计整个指标的公式，然后再进行对编程能力的整体综合评价。其中部分的数据表1展示如下：
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/factor_partdata.png?raw=true" alt="factor_partdata" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/factor_partdata.png?raw=true" alt="factor_partdata" style="zoom: 50%;" width="800px"/>
 
 <center>表1 开发者编程能力影响因素的部分数据</center>
 
 本次研究利用从数据库提取出的2020年共计31万个开发者的数据指标进行CRITIC权重计算，根据CRITIC权重法计算出八个影响因素的权重如表2所示：
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;"  width="500px"/>
 
 <center>表2 CRITIC的计算结果</center>
 
 $$
 W_{myItem}=0.175 \ \ ,\ \ W_{watch}=0.106 \ \ ,\ \ W_{fork}=0.171 \ \ ,\ \ W_{watch}=0.087 \ \ \ \ 
-\\ 
+$$
+
+$$
 W_{pr}=0.071 \ \ ,\ \ W_{pr\_merged}=0.127 \ \ ,\ \ W_{pr\_review}=0.144 \ \ ,\ \ W_{follower}=0.120 \ \ \
 $$
 
 由此得出指标具体的计算公式为：
-$$
-PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \\
-+ 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \\
-+ 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
-$$
+```math
+PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork})
+```
+```math
+ + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged})
+```
+```math
+ + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
+```
 
 ### 3 映射函数的设计
 
 指标中各影响因素的评判采用分值的形式，先对数据进行如表3的方式统计，再对数据进行分段处理并给分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:67%;" width="600px"/>
 
 <center>表3 创建项目总数的统计数据</center>
 
@@ -93,12 +106,12 @@ $$
 
 在分段和分值里，采取的均是分十段的方式，第一段是10分，最后一段是满分100分，10分是每个因素所对应的值为0的分数，是作为鼓励参与到GitHub中的开发者；第二段设置为60分，因为60分是作为及格线；从第三段开始，每一段都增加5分，直到叠加为满分100分。同理，其他七个影响因素也是按照相同的原理进行分段和打分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" width="500px"/>
 
 <center>图1 创建相应数量项目的开发者人数</center>
 
 分析上述分段规律，将数据划分为如下区间：
-$$
+```math
 S_{myItems}=
 \begin{cases}
 10,&myItems=0\\60,&myItems=1\\65,&myItems=2\\70,&myItems=3\\75,&myItems=4\\80,&myItems=5\\85,&myItems=6\\90,&myItems=7\\95,&myItems=8\\100,&myItems≥9
@@ -109,6 +122,8 @@ S_{watches}=
 10,&watches=0\\60,&watches=1\\65,&watches=2\\70,&watches=3\\75,&4≤watches≤6\\80,&7≤watches≤11\\85,&12≤watches≤24\\90,&25≤watches≤67\\95,&68≤watches≤299\\100,&watches≥300
 \end{cases}
 \\\\
+```
+```math
 S_{froks}=
 \begin{cases}
 10,&forks=0\\60,&forks=1\\65,&2≤forks≤3\\70,&4≤forks≤9\\75,&10≤forks≤25\\80,&26≤forks≤70\\85,&71≤forks≤226\\90,&227≤forks≤1600\\95,&1601≤forks≤2999\\100,&forks≥3000
@@ -119,6 +134,8 @@ S_{parItems}=
 10,&parItems=0\\60,&parItems=1\\65,&parItems=2\\70,&parItems=3\\75,&parItems=4\\80,&parItems=5\\85,&parItems=6\\90,&parItems=7\\95,&parItems=8\\100,&parItems≥9
 \end{cases}
 \\\\
+```
+```math
 S_{pr}=
 \begin{cases}
 10,&pr=0\\60,&pr=1\\65,&pr=2\\70,&3≤pr≤6\\75,&7≤pr≤12\\80,&13≤pr≤26\\85,&27≤pr≤57\\90,&58≤pr≤149\\95,&150≤pr≤512\\100,&pr≥513
@@ -129,6 +146,8 @@ S_{pr\_merged}=
 10,&pr_merged=0\\60,&pr_merged=1\\65,&pr_merged=2\\70,&3≤pr_merged≤5\\75,&6≤pr_merged≤8\\80,&9≤pr_merged≤15\\85,&16≤pr_merged≤27\\90,&28≤pr_merged≤51\\95,&52≤pr_merged≤121\\100,&pr_merged≥122
 \end{cases}
 \\\\
+```
+```math
 S_{pr\_review}=
 \begin{cases}
 10,&pr_review=0\\60,&pr_review=1\\65,&2≤pr_review≤3\\70,&4≤pr_review≤5\\75,&6≤pr_review≤8\\80,&9≤pr_review≤14\\85,&15≤pr_review≤22\\90,&23≤pr_review≤38\\95,&39≤pr_review≤68\\100,&pr_review≥69
@@ -138,7 +157,7 @@ S_{followers}=
 \begin{cases}
 10,&followers=0\\60,&followers=1\\65,&2≤followers≤3\\70,&4≤followers≤7\\75,&8≤followers≤14\\80,&15≤followers≤24\\85,&25≤followers≤43\\90,&44≤followers≤92\\95,&93≤followers≤351\\100,&followers≥352
 \end{cases}
-$$
+```
 
 ## 五、 数据来源及处理
 
@@ -160,7 +179,7 @@ $$
 
 根据数据库中获取到的全域开发者信息，我们对数据进行处理和分析，利用本文的评估指标模型计算公式，计算出每位开发者编程能力得分情况，如表4所示。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_score_partdata.png?raw=true" alt="PA_score" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_score_partdata.png?raw=true" alt="PA_score" style="zoom: 50%;" width="800px"/>
 
 <center>表4 开发者编程能力得分部分数据</center>
 
@@ -172,13 +191,13 @@ $$
 
 （1）在GitHub社区中的开发者个人页面可以展示该开发者编程能力雷达图，雷达图展示编程能力八个影响因素的分值情况。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:67%;" width="400px"/>
 
 <center>图3 开发者编程能力各影响因数的分值</center>
 
 （2）在GitHub社区中的首页推荐部分可以展示开发者编程能力Top10排行榜。将开发者编程能力排行前十的开发者依据能力值以从高到低的形式排列出来。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" width="400px"/>
 
 <center>图4 GitHub中开发者编程能力TOP10</center>
 
