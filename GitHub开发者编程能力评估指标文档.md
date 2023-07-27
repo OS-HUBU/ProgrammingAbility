@@ -45,7 +45,9 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
 开发者编程能力评估指标的计算公式为：
 ```math
 PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks})
+
 +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged})
+
 + W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
 ```
 \
