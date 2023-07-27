@@ -40,7 +40,7 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
 
 ### 1 指标计算模型
 
- <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" width="500px"/>
+ <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 50%;"  width="500px"/>
 
 开发者编程能力评估指标的计算公式为：
 $$
@@ -54,13 +54,13 @@ CRITIC权重法是一种基于数据波动性的客观赋权法。其思想在�
 
 编程能力一共有八个影响因素，如下表所示，该表共有31万条开发者的数据，通过对已有的八个影响因素的数据进行分析，得出各个影响因素的权重。因此，可以来设计整个指标的公式，然后再进行对编程能力的整体综合评价。其中部分的数据表1展示如下：
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/factor_partdata.png?raw=true" alt="factor_partdata" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/factor_partdata.png?raw=true" alt="factor_partdata" style="zoom: 50%;" width="800px"/>
 
 <center>表1 开发者编程能力影响因素的部分数据</center>
 
 本次研究利用从数据库提取出的2020年共计31万个开发者的数据指标进行CRITIC权重计算，根据CRITIC权重法计算出八个影响因素的权重如表2所示：
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;"  width="600px"/>
 
 <center>表2 CRITIC的计算结果</center>
 
@@ -81,7 +81,7 @@ $$
 
 指标中各影响因素的评判采用分值的形式，先对数据进行如表3的方式统计，再对数据进行分段处理并给分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:67%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:67%;" width="800px"/>
 
 <center>表3 创建项目总数的统计数据</center>
 
@@ -93,7 +93,7 @@ $$
 
 在分段和分值里，采取的均是分十段的方式，第一段是10分，最后一段是满分100分，10分是每个因素所对应的值为0的分数，是作为鼓励参与到GitHub中的开发者；第二段设置为60分，因为60分是作为及格线；从第三段开始，每一段都增加5分，直到叠加为满分100分。同理，其他七个影响因素也是按照相同的原理进行分段和打分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" width="800px"/>
 
 <center>图1 创建相应数量项目的开发者人数</center>
 
@@ -160,7 +160,7 @@ $$
 
 根据数据库中获取到的全域开发者信息，我们对数据进行处理和分析，利用本文的评估指标模型计算公式，计算出每位开发者编程能力得分情况，如表4所示。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_score_partdata.png?raw=true" alt="PA_score" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_score_partdata.png?raw=true" alt="PA_score" style="zoom: 50%;" width="800px"/>
 
 <center>表4 开发者编程能力得分部分数据</center>
 
@@ -172,13 +172,13 @@ $$
 
 （1）在GitHub社区中的开发者个人页面可以展示该开发者编程能力雷达图，雷达图展示编程能力八个影响因素的分值情况。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:67%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:67%;" width="500px"/>
 
 <center>图3 开发者编程能力各影响因数的分值</center>
 
 （2）在GitHub社区中的首页推荐部分可以展示开发者编程能力Top10排行榜。将开发者编程能力排行前十的开发者依据能力值以从高到低的形式排列出来。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" />
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" width="500px"/>
 
 <center>图4 GitHub中开发者编程能力TOP10</center>
 
