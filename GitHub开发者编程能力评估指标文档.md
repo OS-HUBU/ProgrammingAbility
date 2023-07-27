@@ -43,9 +43,9 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
  <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 50%;"  width="500px"/>
 
 开发者编程能力评估指标的计算公式为：\
-$$\
+$${
 PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks}) +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged}) + W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
-$$
+}$$
 \
 其中，PA表示开发者编程能力值，W<sub>factor</sub>表示影响因素factor的权重系数；C<sub>factor</sub> 表示该开发者在影响因素factor上的数量，比如某个开发者创建项目的数量；S(C<sub>factor</sub>) 表示影响因素factor的得分，是以影响因素factor为自变量的函数值，函数S即为相应影响因素的实际映射方式，例如某个开发者创建了多少个项目，依据创建的项目数量给予得分。
 
@@ -72,11 +72,11 @@ W_{pr}=0.071 \ \ ,\ \ W_{pr\_merged}=0.127 \ \ ,\ \ W_{pr\_review}=0.144 \ \ ,\ 
 $$
 
 由此得出指标具体的计算公式为：\
-$$
+$${
 PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \ \
  + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
  + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
-$$
+}$$
 
 ### 3 映射函数的设计
 
@@ -98,7 +98,7 @@ $$
 
 <center>图1 创建相应数量项目的开发者人数</center>
 
-分析上述分段规律，将数据划分为如下区间：
+分析上述分段规律，将数据划分为如下区间：\
 $$
 S_{myItems}=
 \begin{cases}
