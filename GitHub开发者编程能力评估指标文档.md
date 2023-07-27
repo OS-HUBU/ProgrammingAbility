@@ -4,7 +4,7 @@
 
 ## 一、问题描述
 
->GitHub并没有专门为招聘人员提供相关信息来推断软件开发者的技能水平，为了评估开发人员的质量，招聘人员必须手工检索相应软件开发者的个人信息及存储仓库。
+GitHub并没有专门为招聘人员提供相关信息来推断软件开发者的技能水平，为了评估开发人员的质量，招聘人员必须手工检索相应软件开发者的个人信息及存储仓库。
 
 在一个开源社区，如何评判一个开发者编程能力的强弱？
 
@@ -40,7 +40,7 @@
 
 ### 1 指标计算模型
 
- <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 67%;" />
+ <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 67%;" width="300px"/>
 
 开发者编程能力评估指标的计算公式为：
 $$
