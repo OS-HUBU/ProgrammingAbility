@@ -45,9 +45,11 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
 开发者编程能力评估指标的计算公式为：
 ```math
 PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks})
-
+```
+```math
 +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged})
-
+```
+```math
 + W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
 ```
 \
@@ -76,11 +78,11 @@ W_{pr}=0.071 \ \ ,\ \ W_{pr\_merged}=0.127 \ \ ,\ \ W_{pr\_review}=0.144 \ \ ,\ 
 $$
 
 由此得出指标具体的计算公式为：\
-$${
+```math
 PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \ \
  + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
  + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
-}$$
+```
 
 ### 3 映射函数的设计
 
@@ -103,7 +105,7 @@ PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \ \
 <center>图1 创建相应数量项目的开发者人数</center>
 
 分析上述分段规律，将数据划分为如下区间：\
-$$
+```math
 S_{myItems}=
 \begin{cases}
 10,&myItems=0\\60,&myItems=1\\65,&myItems=2\\70,&myItems=3\\75,&myItems=4\\80,&myItems=5\\85,&myItems=6\\90,&myItems=7\\95,&myItems=8\\100,&myItems≥9
@@ -143,7 +145,7 @@ S_{followers}=
 \begin{cases}
 10,&followers=0\\60,&followers=1\\65,&2≤followers≤3\\70,&4≤followers≤7\\75,&8≤followers≤14\\80,&15≤followers≤24\\85,&25≤followers≤43\\90,&44≤followers≤92\\95,&93≤followers≤351\\100,&followers≥352
 \end{cases}
-$$
+```
 
 ## 五、 数据来源及处理
 
