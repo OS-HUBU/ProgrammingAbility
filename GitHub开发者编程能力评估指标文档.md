@@ -79,8 +79,12 @@ $$
 
 由此得出指标具体的计算公式为：\
 ```math
-PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \ \
+PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork})
+```
+```math
  + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
+```
+```math
  + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
 ```
 
@@ -116,6 +120,8 @@ S_{watches}=
 10,&watches=0\\60,&watches=1\\65,&watches=2\\70,&watches=3\\75,&4≤watches≤6\\80,&7≤watches≤11\\85,&12≤watches≤24\\90,&25≤watches≤67\\95,&68≤watches≤299\\100,&watches≥300
 \end{cases}
 \\\\
+```
+```math
 S_{froks}=
 \begin{cases}
 10,&forks=0\\60,&forks=1\\65,&2≤forks≤3\\70,&4≤forks≤9\\75,&10≤forks≤25\\80,&26≤forks≤70\\85,&71≤forks≤226\\90,&227≤forks≤1600\\95,&1601≤forks≤2999\\100,&forks≥3000
@@ -126,6 +132,8 @@ S_{parItems}=
 10,&parItems=0\\60,&parItems=1\\65,&parItems=2\\70,&parItems=3\\75,&parItems=4\\80,&parItems=5\\85,&parItems=6\\90,&parItems=7\\95,&parItems=8\\100,&parItems≥9
 \end{cases}
 \\\\
+```
+```math
 S_{pr}=
 \begin{cases}
 10,&pr=0\\60,&pr=1\\65,&pr=2\\70,&3≤pr≤6\\75,&7≤pr≤12\\80,&13≤pr≤26\\85,&27≤pr≤57\\90,&58≤pr≤149\\95,&150≤pr≤512\\100,&pr≥513
@@ -136,6 +144,8 @@ S_{pr\_merged}=
 10,&pr_merged=0\\60,&pr_merged=1\\65,&pr_merged=2\\70,&3≤pr_merged≤5\\75,&6≤pr_merged≤8\\80,&9≤pr_merged≤15\\85,&16≤pr_merged≤27\\90,&28≤pr_merged≤51\\95,&52≤pr_merged≤121\\100,&pr_merged≥122
 \end{cases}
 \\\\
+```
+```math
 S_{pr\_review}=
 \begin{cases}
 10,&pr_review=0\\60,&pr_review=1\\65,&2≤pr_review≤3\\70,&4≤pr_review≤5\\75,&6≤pr_review≤8\\80,&9≤pr_review≤14\\85,&15≤pr_review≤22\\90,&23≤pr_review≤38\\95,&39≤pr_review≤68\\100,&pr_review≥69
