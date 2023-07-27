@@ -61,7 +61,7 @@ CRITIC权重法是一种基于数据波动性的客观赋权法。其思想在�
 
 本次研究利用从数据库提取出的2020年共计31万个开发者的数据指标进行CRITIC权重计算，根据CRITIC权重法计算出八个影响因素的权重如表2所示：
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;"  width="600px"/>
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/critic_weight.png?raw=true" alt="critic_weight" style="zoom: 50%;"  width="500px"/>
 
 <center>表2 CRITIC的计算结果</center>
 
@@ -74,15 +74,15 @@ $$
 由此得出指标具体的计算公式为：\
 $$
 PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork}) \ \
-+ 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
-+ 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
+ + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
+ + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
 $$
 
 ### 3 映射函数的设计
 
 指标中各影响因素的评判采用分值的形式，先对数据进行如表3的方式统计，再对数据进行分段处理并给分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:67%;" width="800px"/>
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_partdata.png?raw=true" alt="myItems_partdata" style="zoom:67%;" width="600px"/>
 
 <center>表3 创建项目总数的统计数据</center>
 
@@ -94,7 +94,7 @@ $$
 
 在分段和分值里，采取的均是分十段的方式，第一段是10分，最后一段是满分100分，10分是每个因素所对应的值为0的分数，是作为鼓励参与到GitHub中的开发者；第二段设置为60分，因为60分是作为及格线；从第三段开始，每一段都增加5分，直到叠加为满分100分。同理，其他七个影响因素也是按照相同的原理进行分段和打分。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" width="800px"/>
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/myItems_histogram.png?raw=true" alt="myItems_histogram" style="zoom: 50%;" width="500px"/>
 
 <center>图1 创建相应数量项目的开发者人数</center>
 
@@ -173,13 +173,13 @@ $$
 
 （1）在GitHub社区中的开发者个人页面可以展示该开发者编程能力雷达图，雷达图展示编程能力八个影响因素的分值情况。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:67%;" width="500px"/>
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart1.png?raw=true" alt="chart1" style="zoom:67%;" width="400px"/>
 
 <center>图3 开发者编程能力各影响因数的分值</center>
 
 （2）在GitHub社区中的首页推荐部分可以展示开发者编程能力Top10排行榜。将开发者编程能力排行前十的开发者依据能力值以从高到低的形式排列出来。
 
-<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" width="500px"/>
+<img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/chart2.png?raw=true" alt="chart2" style="zoom: 50%;" width="400px"/>
 
 <center>图4 GitHub中开发者编程能力TOP10</center>
 
