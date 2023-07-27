@@ -40,7 +40,7 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
 
 ### 1 指标计算模型
 
- <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 67%;" width="300px"/>
+ <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" width="500px"/>
 
 开发者编程能力评估指标的计算公式为：
 $$
