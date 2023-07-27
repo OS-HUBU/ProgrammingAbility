@@ -73,16 +73,17 @@ CRITIC权重法是一种基于数据波动性的客观赋权法。其思想在�
 
 $$
 W_{myItem}=0.175 \ \ ,\ \ W_{watch}=0.106 \ \ ,\ \ W_{fork}=0.171 \ \ ,\ \ W_{watch}=0.087 \ \ \ \ 
-\\ \
+$$
+$$
 W_{pr}=0.071 \ \ ,\ \ W_{pr\_merged}=0.127 \ \ ,\ \ W_{pr\_review}=0.144 \ \ ,\ \ W_{follower}=0.120 \ \ \
 $$
 
-由此得出指标具体的计算公式为：\
+由此得出指标具体的计算公式为：
 ```math
 PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork})
 ```
 ```math
- + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged}) \ \
+ + 0.087×S(C_{parItems})  + 0.071×S(C_{pr}) + 0.127×S(C_{pr\_merged})
 ```
 ```math
  + 0.144×S(C_{pr\_review}) + 0.120×S(C_{followers})
@@ -108,7 +109,7 @@ PA = 0.175×S(C_{myItem)} + 0.106×S(C_{watch}) + 0.171×S(C_{fork})
 
 <center>图1 创建相应数量项目的开发者人数</center>
 
-分析上述分段规律，将数据划分为如下区间：\
+分析上述分段规律，将数据划分为如下区间：
 ```math
 S_{myItems}=
 \begin{cases}
