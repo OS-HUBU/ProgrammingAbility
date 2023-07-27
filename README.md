@@ -61,11 +61,11 @@ CRITIC权重法是一种基于数据波动性的客观赋权法。其思想在�
 
 编程能力一共有八个影响因素，如下表所示，该表共有31万条开发者的数据，通过对已有的八个影响因素的数据进行分析，得出各个影响因素的权重。因此，可以来设计整个指标的公式，然后再进行对编程能力的整体综合评价。其中部分的数据表1展示如下：
 
-<p align="center">
+<div align="center">
  <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/factor_partdata.png?raw=true" alt="factor_partdata" style="zoom: 50%;" width="800px"/>
  
  <center>表1 开发者编程能力影响因素的部分数据</center>
-</p>
+</div>
 
 本次研究利用从数据库提取出的2020年共计31万个开发者的数据指标进行CRITIC权重计算，根据CRITIC权重法计算出八个影响因素的权重如表2所示：
 
