@@ -43,9 +43,9 @@ GitHub并没有专门为招聘人员提供相关信息来推断软件开发者�
  <img src="https://github.com/OS-HUBU/ProgrammingAbility/blob/master/images/PA_xmind.png?raw=true" alt="PA_xmind" style="zoom: 50%;"  width="500px"/>
 
 开发者编程能力评估指标的计算公式为：\
-$$
-PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks}) \ +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged})\ + W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
-$$
+\$$
+PA = W_{myItems}×S(C_{myItems}) + W_{watches}×S(C_{watches}) + W_{forks}×S(C_{forks}) \\ +W_{parItems}×S(C_{parItems})+ W_{pr}×S(C_{pr})+W_{pr\_merged}×S(C_{pr\_merged}) \\ + W_{pr\_review}×S(C_{pr\_review}) + W_{followers}×S(C_{followers})
+\$$
 \
 其中，PA表示开发者编程能力值，W<sub>factor</sub>表示影响因素factor的权重系数；C<sub>factor</sub> 表示该开发者在影响因素factor上的数量，比如某个开发者创建项目的数量；S(C<sub>factor</sub>) 表示影响因素factor的得分，是以影响因素factor为自变量的函数值，函数S即为相应影响因素的实际映射方式，例如某个开发者创建了多少个项目，依据创建的项目数量给予得分。
 
